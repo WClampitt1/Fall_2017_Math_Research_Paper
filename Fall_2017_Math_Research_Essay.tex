@@ -1,0 +1,59 @@
+\documentclass[12]{amsart}
+
+%packeges used in this document
+\usepackage{amsrefs}
+
+\title
+[Examination of the Cross Product] % shortened title for headings
+{Examination of the Cross Product as a Special Case of the Exterior Product in Three Dimensions}
+
+\author{William Clampitt}
+\date{November 24, 2017}
+
+\keywords{Exterior Product, Cross Product, Vector, Bivector, Multivector, Psudovector}
+
+
+
+\begin{document}	
+	\begin{abstract}
+		In Calculus III students are introduced to the cross product of two vectors, three-dimensional, Euclidean space. The cross-product exhibits properties, such as being normal two the original two vectors and having a magnitude equal to that of the area formed by the original two vectors. In exterior algebra, this operation is described by the exterior product. The exterior product creates a multi-vector that describes the parallelogram formed by the original two vectors with a clockwise or counter clockwise orientation. Through this research, properties of the cross product are explained in terms of the exterior product to demystify the seemingly random properties displayed by the cross product. My research into these relationships was conducted by researching other scholarly articles about the exterior product and its properties and comparing them to those exhibited by the cross product. The results of this comparison show a possibly more intuitive way of looking at relationships between two vectors in space.
+	\end{abstract}
+
+	\maketitle
+	\newpage
+
+	\section{Introduction}
+		In Calculus III, students are, often for the first time, introduced to the cross product. The cross product takes two vectors in three dimensions and creates a normal vector with a magnitude equal to that of the area formed by the original two vectors. In reality, what the students are actually doing is taking the exterior product of a vector in three dimensions and are creating a three dimensional bi-vector that represents the parallelogram formed b the two vectors. The reality of what the cross product is originates from a branch of mathematics called Exterior Algebra, which is far above the level of mathematics that the students are currently working in when they first learn about the cross product. The simplification of the exterior product into the cross product for three dimensions is caused by the necessity for students to benefit from the usefulness of the exterior product, even though they are not at a level of math to fully understand what is happening. This simplification of generalized concepts for a specific use case happens very frequently in the study of mathematics in order to prevent students from being overwhelmed by a mass of abstract concepts by giving students incremental knowledge and then expanding on it in the future as they progress. Through this paper, a closer look will be taken at properties of the exterior product and how they translate to the properties students learn about the cross product.
+		
+	\section{Current Use of the Cross Product}
+		The vector cross product, as taught in Calculus III, is a operation that takes two vectors in $\mathbb{R}^3$ and creates a vector, also in $\mathbb{R}^3$ that is normal to the original two vectors and has a magnitude equal to the area of the parallelogram formed by the two original vectors. The cross product has many application in Calculus III, such as finding the curl of a vector, tangent planes to curves, torque, finding the surface area of a function, and many other applications. The cross product is found by taking the determinant of the matrix. (Note: $\mathbf{e_1}$, $\mathbf{e_2}$, and $\mathbf{e_3}$ are the standard basis vectors for $\mathbb{R}^3$) 
+		
+		$$ 
+		\mathbf{a} \times \mathbf{b} = 
+		\begin{vmatrix} 
+			\mathbf{e_1}&\mathbf{e_2}&\mathbf{e_3}\\
+			a_1&a_2&a_3\\
+			b_1&b_2&b_3
+		\end{vmatrix} 
+		$$
+		\\
+		$$
+		\mathbf{a} \times \mathbf{b} = (a_2 b_3 - a_3 b_2)\mathbf{e_1} + (a_3 b_1 - a_1 b_3)\mathbf{e_2} + (a_1 b_2 a_2 b_1)\mathbf{e_3}
+		$$
+	\newpage
+	%\begin{thebibliography}{1}
+	%	\bibitem{Velic1}
+	%		Daniela Velichov\'{a},
+	%		\textit{Minkowski Set Operations in Geometric Modeling of Continuous Riemannian Manifolds},
+	%		Bratislava, Slovakia
+	\bib{BW}{article}{
+	author = {Clampitt, William},
+	title = {Your Title},
+	date = {Date},
+	journal = {Journal},
+	volume = {Volume},
+	number = {Number},
+	pages = {start page \ndash end page},
+	}
+%	\end{thebibliography}
+\end{document}

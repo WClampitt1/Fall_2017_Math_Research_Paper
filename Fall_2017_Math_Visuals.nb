@@ -1,0 +1,278 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9800,        268]
+NotebookOptionsPosition[      8572,        232]
+NotebookOutlinePosition[      8918,        247]
+CellTagsIndexPosition[      8875,        244]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{"Red", ",", " ", 
+    RowBox[{"Parallelogram", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "0"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], ",", " ", "1"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", " ", "0"}], "}"}]}], "}"}]}], "]"}]}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7220996436500735`*^9, 3.722099713664938*^9}, {
+  3.7220997580265117`*^9, 
+  3.72209978360228*^9}},ExpressionUUID->"96664331-53ff-4be1-84ba-\
+455f68617899"],
+
+Cell[BoxData[
+ GraphicsBox[
+  {RGBColor[1, 0, 0], 
+   InterpretationBox[
+    PolygonBox[
+     NCache[{{0, 0}, {Rational[1, 2], 1}, {Rational[3, 2], 1}, {1, 0}}, {{0, 
+       0}, {0.5, 1}, {1.5, 1}, {1, 0}}]],
+    Parallelogram[{0, 0}, {{
+       Rational[1, 2], 1}, {1, 0}}]]}]], "Output",
+ CellChangeTimes->{{3.7220997601928525`*^9, 
+  3.7220997851040573`*^9}},ExpressionUUID->"2cc2740b-1fa2-4495-a55b-\
+32726c11fa69"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", " ", "0", ",", " ", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], 
+    RowBox[{"{", 
+     RowBox[{"1", ",", " ", 
+      RowBox[{"\[Sqrt]", "3"}], ",", " ", "0"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"origin", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"crossDiagram", " ", "=", 
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Opacity", "[", ".5", "]"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Makes", " ", "area", " ", "of", " ", "Parallelogram", " ", 
+         "transparent"}], " ", "*)"}], "\[IndentingNewLine]", "Yellow", ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Polygon", "[", 
+        RowBox[{"{", 
+         RowBox[{"origin", ",", " ", "a", ",", " ", 
+          RowBox[{"a", "+", "b"}], ",", "  ", "b"}], "}"}], "]"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Forms", " ", "Parallelogram", " ", "made", " ", "by", " ", "a", " ", 
+         "and", " ", "b"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Opacity", "[", "1", "]"}], ",", " ", "\[IndentingNewLine]", 
+       "Blue", ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"Arrow", "[", 
+        RowBox[{"{", 
+         RowBox[{"origin", ",", " ", "a"}], "}"}], "]"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Vector", " ", "a"}], " ", "*)"}], "\[IndentingNewLine]", 
+       "Red", ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"Arrow", "[", 
+        RowBox[{"{", 
+         RowBox[{"origin", ",", " ", "b"}], "}"}], "]"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Vector", " ", "b"}], " ", "*)"}], "\[IndentingNewLine]", 
+       "Purple", ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"Arrow", "[", 
+        RowBox[{"{", 
+         RowBox[{"origin", ",", " ", 
+          RowBox[{"Cross", "[", 
+           RowBox[{"a", ",", " ", "b"}], "]"}]}], "}"}], "]"}]}], " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Vector", " ", 
+        RowBox[{"a", " ", "\[Cross]", " ", "b"}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", "}"}], "]"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"crossDiagram", ",", " ", 
+   RowBox[{"Boxed", " ", "\[Rule]", " ", "False"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.722099791478154*^9, 3.7220999457162905`*^9}, {
+  3.7221000245353127`*^9, 3.7221001139084682`*^9}, {3.722100151259431*^9, 
+  3.7221001903186955`*^9}, {3.722100227505701*^9, 3.7221002920915756`*^9}, {
+  3.7221003234123945`*^9, 3.7221003712289867`*^9}, {3.722100419212597*^9, 
+  3.7221004416838627`*^9}, {3.722100474043739*^9, 3.7221006490512342`*^9}, {
+  3.722100756920061*^9, 3.722100797168582*^9}, {3.7221009670041246`*^9, 
+  3.722101049809744*^9}, {3.7221011187909994`*^9, 3.7221011571692348`*^9}, {
+  3.7221012143751364`*^9, 3.7221013221713533`*^9}, {3.7221013833646364`*^9, 
+  3.722101504602679*^9}, {3.7221015361392517`*^9, 3.7221015738184514`*^9}, {
+  3.722101607685825*^9, 3.722101620771344*^9}, {3.7221032631849546`*^9, 
+  3.7221032885816755`*^9}, {3.722175857993094*^9, 
+  3.7221758583473577`*^9}},ExpressionUUID->"cf1c95ca-2cf7-43c0-a4ad-\
+bed779905434"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[1, 1, 0], Opacity[0.5], 
+    Polygon3DBox[
+     NCache[{{0, 0, 0}, {1, 0, 0}, {
+       Rational[3, 2], Rational[1, 2] 3^Rational[1, 2], 0}, {
+       Rational[1, 2], Rational[1, 2] 3^Rational[1, 2], 0}}, {{0, 0, 0}, {1, 
+       0, 0}, {1.5, 0.8660254037844386, 0}, {0.5, 0.8660254037844386, 0}}]]}, 
+   {RGBColor[0, 0, 1], Opacity[1], Arrow3DBox[{{0, 0, 0}, {1, 0, 0}}], 
+    {RGBColor[1, 0, 0], 
+     Arrow3DBox[
+      NCache[{{0, 0, 0}, {
+        Rational[1, 2], Rational[1, 2] 3^Rational[1, 2], 0}}, {{0, 0, 0}, {
+        0.5, 0.8660254037844386, 0}}]]}, 
+    {RGBColor[0.5, 0, 0.5], 
+     Arrow3DBox[
+      NCache[{{0, 0, 0}, {0, 0, Rational[1, 2] 3^Rational[1, 2]}}, {{0, 0, 
+        0}, {0, 0, 0.8660254037844386}}]]}}},
+  Boxed->False,
+  ImageSize->{339.27562906837807`, 389.75108103125467`},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{3.0953369573171754`, -0.6976031056868184, 1.1756866196408609`},
+  ViewVertical->{0.27406877941319346`, -0.05358056391970141, 
+   1.6648687742951194`}]], "Output",
+ CellChangeTimes->{
+  3.7221758612111073`*^9},ExpressionUUID->"a03b5a05-d3c4-476f-a0fa-\
+891651c028da"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[1, 1, 0], Opacity[0.5], 
+    Polygon3DBox[
+     NCache[{{0, 0, 0}, {1, 0, 0}, {2, 3^Rational[1, 2], 0}, {
+       1, 3^Rational[1, 2], 0}}, {{0, 0, 0}, {1, 0, 0}, {
+       2, 1.7320508075688772`, 0}, {1, 1.7320508075688772`, 0}}]]}, 
+   {RGBColor[0, 0, 1], Opacity[1], Arrow3DBox[{{0, 0, 0}, {1, 0, 0}}], 
+    {RGBColor[1, 0, 0], 
+     Arrow3DBox[
+      NCache[{{0, 0, 0}, {1, 3^Rational[1, 2], 0}}, {{0, 0, 0}, {
+        1, 1.7320508075688772`, 0}}]]}, 
+    {RGBColor[0.5, 0, 0.5], 
+     Arrow3DBox[
+      NCache[{{0, 0, 0}, {0, 0, 3^Rational[1, 2]}}, {{0, 0, 0}, {
+        0, 0, 1.7320508075688772`}}]]}}},
+  Boxed->False,
+  ImageSize->{424.2309682906108, 348.55638021718147`},
+  ViewPoint->{3.2059814910602937`, 0.09519339289784348, 1.078248995792444},
+  ViewVertical->{0.17502324587945944`, 0.018856115923043232`, 
+   1.1367205452945421`}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.72210113674813*^9, 3.722101157854048*^9}, 
+   3.7221012460225754`*^9, {3.7221012786455183`*^9, 3.722101323094722*^9}, 
+   3.722101388394121*^9, {3.7221032766342278`*^9, 3.722103291315935*^9}, 
+   3.722166847237114*^9},ExpressionUUID->"e80cbcc0-713b-45d3-8301-\
+80fa50fe3763"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"cross_diagram", ",", 
+   RowBox[{"FaceGrids", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.722101062556125*^9, 
+  3.722101063210543*^9}},ExpressionUUID->"5d792dcc-3250-4070-9880-\
+2f81af1ddd6b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Show","gtype",
+   "\"\\!\\(\\*RowBox[{\\\"Pattern\\\"}]\\) is not a type of graphics.\"",2,
+   140,11,16581087588496834303,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.722101063541651*^9},ExpressionUUID->"f75ee786-4d12-42e2-a718-\
+9b7d9c73764e"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"cross_diagram", ",", 
+   RowBox[{"FaceGrids", "\[Rule]", "All"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.722101063541651*^9},ExpressionUUID->"3a19fb84-bdaa-4873-8af4-\
+04246bee15fe"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.722101009264948*^9, 
+  3.7221010102286043`*^9}},ExpressionUUID->"bfea74c4-6318-4e8c-8f55-\
+9a578e20e533"]
+},
+WindowSize->{1920, 997},
+WindowMargins->{{Automatic, 1912}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 648, 19, 30, "Input", "ExpressionUUID" -> \
+"96664331-53ff-4be1-84ba-455f68617899"],
+Cell[1231, 43, 418, 11, 260, "Output", "ExpressionUUID" -> \
+"2cc2740b-1fa2-4495-a55b-32726c11fa69"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1686, 59, 3468, 79, 340, "Input", "ExpressionUUID" -> \
+"cf1c95ca-2cf7-43c0-a4ad-bed779905434"],
+Cell[5157, 140, 1150, 26, 438, "Output", "ExpressionUUID" -> \
+"a03b5a05-d3c4-476f-a0fa-891651c028da"],
+Cell[6310, 168, 1246, 27, 364, "Output", "ExpressionUUID" -> \
+"e80cbcc0-713b-45d3-8301-80fa50fe3763"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7593, 200, 258, 6, 30, InheritFromParent, "ExpressionUUID" -> \
+"5d792dcc-3250-4070-9880-2f81af1ddd6b"],
+Cell[7854, 208, 307, 8, 21, "Message", "ExpressionUUID" -> \
+"f75ee786-4d12-42e2-a718-9b7d9c73764e"],
+Cell[8164, 218, 235, 6, 30, "Output", "ExpressionUUID" -> \
+"3a19fb84-bdaa-4873-8af4-04246bee15fe"]
+}, Open  ]],
+Cell[8414, 227, 154, 3, 30, "Input", "ExpressionUUID" -> \
+"bfea74c4-6318-4e8c-8f55-9a578e20e533"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
